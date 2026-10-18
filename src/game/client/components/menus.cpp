@@ -3,6 +3,8 @@
 
 #include "menus.h"
 
+#include <game/version.h>
+
 #include <base/color.h>
 #include <base/dbg.h>
 #include <base/fs.h>
@@ -724,6 +726,20 @@ void CMenus::RenderLoadingDirect(const char *pCaption, const char *pContent, std
 	Graphics()->TextureClear();
 	Box.Draw(ColorRGBA(0.0f, 0.0f, 0.0f, 0.5f), IGraphics::CORNER_ALL, 15.0f);
 	Box.Margin(20.0f, &Box);
+
+	// the client signs the wait
+	{
+		CUIRect Mark;
+		Box.HSplitTop(30.0f, &Mark, &Box);
+		TextRender()->TextColor(ColorRGBA(0.78f, 0.82f, 0.96f, 1.0f));
+		Ui()->DoLabel(&Mark, CLIENT_LONG_NAME, 26.0f, TEXTALIGN_MC);
+		CUIRect Under;
+		Box.HSplitTop(13.0f, &Under, &Box);
+		TextRender()->TextColor(ColorRGBA(0.55f, 0.58f, 0.70f, 1.0f));
+		Ui()->DoLabel(&Under, KIZASHI_VERSION " (DDNet " KIZASHI_DDNET_VERSION ")", 8.0f, TEXTALIGN_MC);
+		TextRender()->TextColor(TextRender()->DefaultTextColor());
+		Box.HSplitTop(8.0f, nullptr, &Box);
+	}
 
 	CUIRect Label;
 	Box.HSplitTop(24.0f, &Label, &Box);

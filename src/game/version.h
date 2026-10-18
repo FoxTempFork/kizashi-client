@@ -5,7 +5,7 @@
 
 // ddnet
 #define GAME_NAME "DDNet"
-#define DDNET_VERSION_NUMBER 20010
+#define DDNET_VERSION_NUMBER 17636
 extern const char *GIT_SHORTREV_HASH;
 #ifndef GAME_RELEASE_VERSION_INTERNAL
 #define GAME_RELEASE_VERSION_INTERNAL 20.1
@@ -20,13 +20,20 @@ extern const char *GIT_SHORTREV_HASH;
 #define GAME_NETVERSION "0.6 626fce9a778df4d4"
 #define GAME_NETVERSION7 "0.7 802f1be60a05665f"
 
-// TClient
+// TClient: the upstream base we build on. Kept for the upstream update check
+// and the version message, not shown as this client's own version.
 #ifndef TCLIENT_VERSION
 #define TCLIENT_VERSION "10.9.0"
 #endif
 
-// custom
-#define CLIENT_NAME "TClient"
-#define CLIENT_RELEASE_VERSION TCLIENT_VERSION
+// kizashi
+#define CLIENT_NAME "kizashi"
+#define CLIENT_LONG_NAME "kizashi client"
+#define KIZASHI_VERSION "1.1.1"
+// Keep in sync with DDNET_VERSION_NUMBER above; STRINGIFY is not used here so
+// the literal stays readable in the one place the version line is built.
+#define KIZASHI_DDNET_VERSION "17636"
+#define CLIENT_RELEASE_VERSION KIZASHI_VERSION
+#define CLIENT_VERSION_STRING CLIENT_LONG_NAME " - " KIZASHI_VERSION " (DDNet " KIZASHI_DDNET_VERSION ")"
 
 #endif

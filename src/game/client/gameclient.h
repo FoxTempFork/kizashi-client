@@ -79,7 +79,10 @@
 #include "components/tclient/rainbow.h"
 #include "components/tclient/scripting.h"
 #include "components/tclient/skinprofiles.h"
+#include "components/tclient/fngfeed.h"
+#include "components/tclient/nowplaying.h"
 #include "components/tclient/statusbar.h"
+#include "components/tclient/teamwatch.h"
 #include "components/tclient/tclient.h"
 #include "components/tclient/trails.h"
 #include "components/tclient/translate.h"
@@ -235,6 +238,9 @@ public:
 	CPet m_Pet;
 	CPlayerIndicator m_PlayerIndicator;
 	COutlines m_Outlines;
+	CNowPlaying m_NowPlaying;
+	CFngFeed m_FngFeed;
+	CTeamWatch m_TeamWatch;
 	CMumble m_Mumble;
 	CRainbow m_Rainbow;
 	CWarList m_WarList;

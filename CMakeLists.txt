@@ -2893,6 +2893,12 @@ if(CLIENT)
     components/tclient/pet.h
     components/tclient/player_indicator.cpp
     components/tclient/player_indicator.h
+    components/tclient/fngfeed.cpp
+    components/tclient/fngfeed.h
+    components/tclient/nowplaying.cpp
+    components/tclient/nowplaying.h
+    components/tclient/teamwatch.cpp
+    components/tclient/teamwatch.h
     components/tclient/rainbow.cpp
     components/tclient/rainbow.h
     components/tclient/scripting.cpp
@@ -3633,6 +3639,7 @@ if((GTEST_FOUND OR DOWNLOAD_GTEST) AND SERVER)
     dbg_test.cpp
     editor_test.cpp
     fs_test.cpp
+    gamecore_test.cpp
     gameworld_test.cpp
     git_revision_test.cpp
     hash_test.cpp

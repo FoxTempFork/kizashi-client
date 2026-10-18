@@ -171,6 +171,9 @@ void CGameClient::OnConsoleInit()
 					      &m_BindWheel, // TClient
 					      &m_WarList, // TClient
 					      &m_StatusBar, // TClient
+					      &m_NowPlaying, // kizashi
+					      &m_FngFeed, // kizashi
+					      &m_TeamWatch, // kizashi
 					      &m_InfoMessages,
 					      &m_Chat,
 					      &m_Broadcast,
@@ -374,11 +377,11 @@ void CGameClient::OnInit()
 
 	if(GIT_SHORTREV_HASH)
 	{
-		str_format(m_aDDNetVersionStr, sizeof(m_aDDNetVersionStr), "%s %s (%s)", CLIENT_NAME, CLIENT_RELEASE_VERSION, GIT_SHORTREV_HASH);
+		str_format(m_aDDNetVersionStr, sizeof(m_aDDNetVersionStr), "%s (%s)", CLIENT_VERSION_STRING, GIT_SHORTREV_HASH);
 	}
 	else
 	{
-		str_format(m_aDDNetVersionStr, sizeof(m_aDDNetVersionStr), "%s %s", CLIENT_NAME, CLIENT_RELEASE_VERSION);
+		str_copy(m_aDDNetVersionStr, CLIENT_VERSION_STRING);
 	}
 
 	// TODO: this should be different

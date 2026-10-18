@@ -1656,7 +1656,7 @@ void CGameConsole::OnRender()
 		TextRender()->Text(ButtonBar.x + ButtonBar.w - TextRender()->TextWidth(FONT_SIZE, aBuf) - 10.0f, FONT_SIZE / 2.f, FONT_SIZE, aBuf);
 
 		// TClient: render client version
-		const char *pClientVersion = CLIENT_NAME " " CLIENT_RELEASE_VERSION;
+		const char *pClientVersion = CLIENT_VERSION_STRING;
 		TextRender()->Text(ButtonBar.x + ButtonBar.w - TextRender()->TextWidth(FONT_SIZE, pClientVersion) - 10.0f, FONT_SIZE / 2.0f + FONT_SIZE * 1.5f, FONT_SIZE, pClientVersion);
 	}
 }

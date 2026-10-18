@@ -51,7 +51,7 @@ void CMenus::RenderSettings(CUIRect MainView)
 		Localize("Sound"),
 		Localize("DDNet"),
 		Localize("Assets"),
-		TCLocalize("TClient"), // TClient
+		TCLocalize("kizashi"), // kizashi
 		Localize("Profiles"), // TClient
 		Localize("Configs"), // TClient
 		Localize("Credits")};

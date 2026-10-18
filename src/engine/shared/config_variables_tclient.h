@@ -183,6 +183,12 @@ MACRO_CONFIG_INT(TcWarListIndicatorTeam, tc_warlist_indicator_team, 1, 0, 1, CFG
 // Status Bar
 MACRO_CONFIG_INT(TcStatusBar, tc_statusbar, 0, 0, 1, CFGFLAG_CLIENT | CFGFLAG_SAVE, "Enable status bar")
 
+// kizashi
+MACRO_CONFIG_INT(TcNowPlaying, tc_nowplaying, 1, 0, 1, CFGFLAG_CLIENT | CFGFLAG_SAVE, "Show the track playing on this machine")
+MACRO_CONFIG_INT(TcFngFeed, tc_fng_feed, 1, 0, 1, CFGFLAG_CLIENT | CFGFLAG_SAVE, "FNG knockout feed and streak")
+MACRO_CONFIG_INT(TcFreezeWatch, tc_freeze_watch, 1, 0, 1, CFGFLAG_CLIENT | CFGFLAG_SAVE, "Name teammates left frozen with nobody coming")
+MACRO_CONFIG_INT(TcFreezeWatchSeconds, tc_freeze_watch_seconds, 4, 1, 60, CFGFLAG_CLIENT | CFGFLAG_SAVE, "Seconds frozen before a teammate is called out")
+
 MACRO_CONFIG_INT(TcStatusBar12HourClock, tc_statusbar_12_hour_clock, 1, 0, 1, CFGFLAG_CLIENT | CFGFLAG_SAVE, "Use 12 hour clock in local time")
 MACRO_CONFIG_INT(TcStatusBarLocalTimeSeconds, tc_statusbar_local_time_seconds, 0, 0, 1, CFGFLAG_CLIENT | CFGFLAG_SAVE, "Show seconds in local time")
 MACRO_CONFIG_INT(TcStatusBarHeight, tc_statusbar_height, 8, 1, 16, CFGFLAG_CLIENT | CFGFLAG_SAVE, "Height of the status bar")
